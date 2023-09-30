@@ -1,6 +1,8 @@
 using DPA.Store.DOMAIN.Core.Interfaces;
 using DPA.Store.DOMAIN.Infrastructure.Data;
 using DPA.Store.DOMAIN.Infrastructure.Repositories;
+using DPA.Store.DOMAIN.Infrastructure.Shared;
+
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +22,7 @@ builder
     .AddTransient<ICategoryRepository, CategoryRepository>();
 
 
+builder.Services.AddSharedInfrastructure(_config);
 
 
 builder.Services.AddControllers();
