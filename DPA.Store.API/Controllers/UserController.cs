@@ -28,6 +28,20 @@ namespace DPA.Store.API.Controllers
             return Ok(result);
         }
 
+        [HttpPost("SignIn")]
+        public async Task<IActionResult> 
+            SignIn([FromBody] UserAuthDTO userAuthDTO)
+        {
+            var result = await 
+                _userService.SignIn(userAuthDTO);
+
+            if(result==null)
+                return BadRequest("Credenciales inválidas");
+
+            return Ok(result); 
+        
+        }
+
 
     }
 }

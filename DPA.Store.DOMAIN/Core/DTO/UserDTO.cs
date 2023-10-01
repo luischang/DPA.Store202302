@@ -44,4 +44,10 @@ namespace DPA.Store.DOMAIN.Core.DTO
         public string UserType { get; set; }
 
     }
+
+    public class UserAuthDTO 
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
 }
