@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Core\DTO\" />
-    <Folder Include="Core\Services\" />
     <Folder Include="Infrastructure\Data\" />
   </ItemGroup>
 

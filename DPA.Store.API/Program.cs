@@ -1,4 +1,5 @@
 using DPA.Store.DOMAIN.Core.Interfaces;
+using DPA.Store.DOMAIN.Core.Services;
 using DPA.Store.DOMAIN.Infrastructure.Data;
 using DPA.Store.DOMAIN.Infrastructure.Repositories;
 using DPA.Store.DOMAIN.Infrastructure.Shared;
@@ -20,7 +21,12 @@ builder
 builder
     .Services
     .AddTransient<ICategoryRepository, CategoryRepository>();
-
+builder
+    .Services
+    .AddTransient<IUserRepository, UserRepository>();
+builder
+    .Services
+    .AddTransient<IUserService, UserService>();
 
 builder.Services.AddSharedInfrastructure(_config);
 
