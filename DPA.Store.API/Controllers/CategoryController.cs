@@ -17,7 +17,7 @@ namespace DPA.Store.API.Controllers
         {
             _categoryRepository = categoryRepository;
         }
-
+        //[AllowAnonymous]
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll()
         {
